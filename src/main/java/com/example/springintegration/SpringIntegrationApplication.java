@@ -11,9 +11,7 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.integration.channel.DirectChannel;
 import org.springframework.integration.core.MessagingTemplate;
 import org.springframework.messaging.Message;
-import org.springframework.messaging.MessageHandler;
 import org.springframework.messaging.MessageHeaders;
-import org.springframework.messaging.MessagingException;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.messaging.support.MessageBuilder;
 
@@ -58,7 +56,6 @@ public class SpringIntegrationApplication implements ApplicationRunner {
                 "newHeaderValue").build();
         inputChannel.send(anotherMessage);
         outputChannel.subscribe(message1 -> System.out.println(message.getPayload()));
-
         MessagingTemplate template = new MessagingTemplate();
     }
 }
