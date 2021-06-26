@@ -5,6 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-5.2.xsd">
 
+    <!-- we are leveraging the spring integration namespace to register channel beans for our ioc container -->g
     <int:channel id="inputChannel"/>
     <int:channel id="outputChannel"/>
 

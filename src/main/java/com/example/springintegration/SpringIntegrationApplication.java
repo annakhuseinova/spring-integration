@@ -48,7 +48,7 @@ public class SpringIntegrationApplication implements ApplicationRunner {
         Map<String, Object> map = new HashMap<>();
         map.put("key", "value");
         MessageHeaders headers = new MessageHeaders(map);
-        Message<String> message = new GenericMessage<>("Hello world", headers );
+        Message<String> message = new GenericMessage<>("Hello world", headers);
         PrintService printService = new PrintService();
         printService.print(message);
         // An easier way to create messages.
